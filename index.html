@@ -1,0 +1,206 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<script type="text/javascript" src="codigo.js"></script>
+	</head>
+	
+	<body>
+
+		<div id="divCabecalho">
+			<h1 id = "titulo">Abra o console do navegador</h1><br>
+
+			<label for="dropForma">Selecione a forma inicial do array:</label><br>
+			<select id="dropForma">
+				<option value="">Aleatória</option>
+				<option value="C">Crescente</option>
+				<option value="D">Decrescente</option>
+			</select>
+			<button onclick="preencheArray(document.getElementById('dropForma').value)">OK</button>
+		</div>
+
+		<div id="array100">
+
+			<h1 id = "titulo2">Vetor de 100 Elementos</h1>		
+			
+			<hr/>
+			<h2>Tempo de Execução</h2>
+
+			<table class="tg">
+				<tr>
+					<th class="tg-0lax">Testes</th>
+					<th class="tg-0lax">Tempo em MS</th>
+					<th class="tg-0lax">Algoritmo</th>
+				</tr>
+				<tr>
+					<td class="tg-0lax">Bubble Sort</td>
+					<td id="tempo_Bubble_Sort" class="tg-0lax">0.0</td>
+					<td><button onclick = "bubble('tempo_Bubble_Sort', array100.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">Selection Sort</td>
+					<td id="tempo_Selection_Sort" class="tg-0lax">0.0</td>
+					<td><button onclick = "selection('tempo_Selection_Sort', array100.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">Insertion Sort</td>
+					<td id="tempo_Insertion_Sort" class="tg-0lax">0.0</td>
+					<td><button onclick = "insertion('tempo_Insertion_Sort', array100.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">Quick Sort</td>
+					<td id="tempo_Quick_Sort" class="tg-0lax">0.0</td>
+					<td><button onclick = "quickSort('tempo_Quick_Sort', array100.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">Heap Sort</td>
+					<td id="tempo_Heap_Sort" class="tg-0lax">0.0</td>
+					<td><button onclick = "heapsort('tempo_Heap_Sort', array100.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg-0lax">Shell Sort</td>
+					<td id="tempo_Shell_Sort" class="tg-0lax">0.0</td>
+					<td><button onclick = "shellsort('tempo_Shell_Sort', array100.slice(0))">Clique Aqui</button></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id = "array1000">
+
+			<h1 id = "titulo2">Vetor de 1000 Elementos</h1>
+		
+			<hr/>
+			<h2>Tempo de Execução</h2>
+
+			<table class="tg2">
+				<tr>
+					<th class="tg2-0lax">Testes</th>
+					<th class="tg2-0lax">Tempo em MS</th>
+					<th class="tg2-0lax">Algoritmo</th>
+				</tr>
+				<tr>
+					<td class="tg2-0lax">Bubble Sort</td>
+					<td id="tempo_Bubble_Sort2" class="tg2-0lax">0.0</td>
+					<td><button onclick = "bubble('tempo_Bubble_Sort2', array1000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg2-0lax">Selection Sort</td>
+					<td id="tempo_Selection_Sort2" class="tg2-0lax">0.0</td>
+					<td><button onclick = "selection('tempo_Selection_Sort2', array1000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg2-0lax">Insertion Sort</td>
+					<td id="tempo_Insertion_Sort2" class="tg2-0lax">0.0</td>
+					<td><button onclick = "insertion('tempo_Insertion_Sort2', array1000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg2-0lax">Quick Sort</td>
+					<td id="tempo_Quick_Sort2" class="tg2-0lax">0.0</td>
+					<td><button onclick = "quickSort('tempo_Quick_Sort2', array1000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg2-0lax">Heap Sort</td>
+					<td id="tempo_Heap_Sort2" class="tg2-0lax">0.0</td>
+					<td><button onclick = "heapsort('tempo_Heap_Sort2', array1000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg2-0lax">Shell Sort</td>
+					<td id="tempo_Shell_Sort2" class="tg2-0lax">0.0</td>
+					<td><button onclick = "shellsort('tempo_Shell_Sort2', array1000.slice(0))">Clique Aqui</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id = "array10000">
+
+			<h1 id = "titulo3">Vetor de 10000 Elementos</h1>
+			
+			<hr/>
+			<h2>Tempo de Execução</h2>
+	
+			<table class="tg3">
+				<tr>
+					<th class="tg3-0lax">Testes</th>
+					<th class="tg3-0lax">Tempo em MS</th>
+					<th class="tg3-0lax">Algoritmo</th>
+				</tr>
+				<tr>
+					<td class="tg3-0lax">Bubble Sort</td>
+					<td id="tempo_Bubble_Sort3" class="tg3-0lax">0.0</td>
+					<td><button onclick = "bubble('tempo_Bubble_Sort3', array10000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg3-0lax">Selection Sort</td>
+					<td id="tempo_Selection_Sort3" class="tg3-0lax">0.0</td>
+					<td><button onclick = "selection('tempo_Selection_Sort3', array10000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg3-0lax">Insertion Sort</td>
+					<td id="tempo_Insertion_Sort3" class="tg3-0lax">0.0</td>
+					<td><button onclick = "insertion('tempo_Insertion_Sort3', array10000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg3-0lax">Quick Sort</td>
+					<td id="tempo_Quick_Sort3" class="tg3-0lax">0.0</td>
+					<td><button onclick = "quickSort('tempo_Quick_Sort3', array10000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg3-0lax">Heap Sort</td>
+					<td id="tempo_Heap_Sort3" class="tg3-0lax">0.0</td>
+					<td><button onclick = "heapsort('tempo_Heap_Sort3', array10000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg3-0lax">Shell Sort</td>
+					<td id="tempo_Shell_Sort3" class="tg3-0lax">0.0</td>
+					<td><button onclick = "shellsort('tempo_Shell_Sort3', array10000.slice(0))">Clique Aqui</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id = "array100000">
+
+			<h1 id = "titulo4">Vetor de 100000 Elementos</h1>
+				
+			<hr/>
+			<h2>Tempo de Execução</h2>
+		
+			<table class="tg4">
+				<tr>
+					<th class="tg4-0lax">Testes</th>
+					<th class="tg4-0lax">Tempo em MS</th>
+					<th class="tg4-0lax">Algoritmo</th>
+				</tr>
+				<tr>
+					<td class="tg4-0lax">Bubble Sort</td>
+					<td id="tempo_Bubble_Sort4" class="tg4-0lax">0.0</td>
+					<td><button onclick = "bubble('tempo_Bubble_Sort4', array100000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg4-0lax">Selection Sort</td>
+					<td id="tempo_Selection_Sort4" class="tg4-0lax">0.0</td>
+					<td><button onclick = "selection('tempo_Selection_Sort4', array100000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg4-0lax">Insertion Sort</td>
+					<td id="tempo_Insertion_Sort4" class="tg4-0lax">0.0</td>
+					<td><button onclick = "insertion('tempo_Insertion_Sort4', array100000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg4-0lax">Quick Sort</td>
+					<td id="tempo_Quick_Sort4" class="tg4-0lax">0.0</td>
+					<td><button onclick = "quickSort('tempo_Quick_Sort4', array100000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg4-0lax">Heap Sort</td>
+					<td id="tempo_Heap_Sort4" class="tg4-0lax">0.0</td>
+					<td><button onclick = "heapsort('tempo_Heap_Sort4', array100000.slice(0))">Clique Aqui</button></td>
+				</tr>
+				<tr>
+					<td class="tg4-0lax">Shell Sort</td>
+					<td id="tempo_Shell_Sort4" class="tg4-0lax">0.0</td>
+				<td><button onclick = "shellsort('tempo_Shell_Sort4', array100000.slice(0))">Clique Aqui</button></td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

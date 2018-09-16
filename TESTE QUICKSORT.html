@@ -1,0 +1,57 @@
+,<html>
+    <head>
+        <script>
+            function quickSort(){
+                var array30d = [1,9,2,8,3,7,4,6,5];
+                var esq = 0;
+                var dir = array30d.length - 1; //indice máximo do array
+
+                console.log("Teste do Selection Sort");
+                console.log("Vetor Desordenado");
+                console.log(array30d);
+                console.log("Ordenando o Vetor\n");
+
+                var tempo1 = performance.now();
+
+                function quickSort1(array30d, esq, dir){
+                var ce = esq;
+                var cd = dir;
+                var meio = parseInt((ce + cd)/ 2);    				
+                while(ce < cd){
+                    while(array30d[ce] < array30d[meio]){
+                        ce++;				
+                    }
+                    while(array30d[cd] > array30d[meio]){
+                        cd--;
+                    }
+                    if(ce <= cd){
+                        var temp = array30d[ce];
+                        array30d[ce] = array30d[cd];
+                        array30d[cd] = temp;
+                        ce++;
+                        cd--;
+                        console.log(array30d);
+                    }			
+                }		
+                if(cd > esq)
+                    quickSort1(array30d, esq, cd);		
+                
+                if(ce < dir)
+                    quickSort1(array30d, ce, dir);		
+                }
+
+                quickSort1(array30d, esq, dir);
+
+                var tempo2 = performance.now();
+
+                console.log(array30d);
+                console.log("");
+                console.log("");
+                
+
+                document.getElementById("tempo_Quick_Sort").innerHTML = tempo2 - tempo1;	
+            }
+            </script>
+    </head>
+    <button onclick="quickSort()">Clique Aqui</button>
+</html>

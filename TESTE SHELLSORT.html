@@ -1,0 +1,32 @@
+<html>
+	<script>
+        function shellsort(){
+
+            var i, j, value;
+            var gap = 1;
+            while(gap < array100f.length){
+                gap = 3*gap+1;
+            }
+            while(gap > 1){
+                gap = parseInt(gap/3);
+                for(i = gap; i < array100f.length; i++) {
+                    value = array100f[i];
+                    j = i - gap;
+                    while ((j >= 0) && (value < array100f[j])) {
+                        array100f[j + gap] = array100f[j];
+                        j = j-gap;
+                    }
+                    array100f[j + gap] = value;
+                }
+            }
+
+            console.log(array100f);
+        }
+
+
+	</script>
+	
+	<h1>Teste do BubbleSort</h1>
+	<button onclick = "shellsort()">Clique Aqui</button>
+	
+</html>

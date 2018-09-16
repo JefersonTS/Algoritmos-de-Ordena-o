@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TESTE SELEÇÃO DIRETA</title>
+</head>
+<script>
+    vet=[3,7,8,937,4,6];
+    var aux = 0;
+    var continua;
+    function teste(){
+        while (continua !== 0) {
+            continua = 0;
+            for(var i = 0; i < vet.length -1; i++) {
+                if(vet[i + 1] < vet[i]) { // Aqui troca a avaliação lógica.
+                    aux = vet[i];
+                    vet[i] = vet[i + 1];
+                    vet[i + 1] = aux;
+                    continua = i;
+                }
+                console.log(vet);
+            }
+        }
+        alert(vet);
+    }
+</script>
+<body>
+
+    <h1>Teste do BubbleSort</h1>
+    <button onclick = "teste()">Clique Aqui</button>
+
+</body>
+</html>

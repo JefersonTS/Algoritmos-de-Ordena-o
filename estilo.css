@@ -1,0 +1,77 @@
+body{
+	width: 900px;
+	margin: 0px auto;
+	padding: 10px;
+	font-family: Californian FB;
+	box-shadow: 0px 0px 25px;
+	background-color:#fff;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+	font-size: 30px;	
+}
+
+h2, button {
+	width: 100%;
+	font-size: 15px;
+}
+
+button:hover{
+	color: #fff;
+	background: black;
+	border-radius: 10px;
+}
+
+/*TABELA*/
+table {
+	width: 100%;
+	margin-top: 15px;	
+}
+
+/* Tabela 1 */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:center;vertical-align:top}
+
+/* Tabela 2 */
+.tg2  {border-collapse:collapse;border-spacing:0;}
+.tg2 td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg2 th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg2 .tg2-0lax{text-align:center;vertical-align:top}
+
+/* Tabela 3 */
+.tg3  {border-collapse:collapse;border-spacing:0;}
+.tg3 td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg3 th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg3 .tg3-0lax{text-align:center;vertical-align:top}
+
+/* Tabela 4 */
+.tg4  {border-collapse:collapse;border-spacing:0;}
+.tg4 td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg4 th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg4 .tg4-0lax{text-align:center;vertical-align:top}
+
+/*  div Array...  */
+
+#divCabecalho, #array100, #array1000, #array10000, #array100000 {
+    width: 500px;
+    margin: 0px auto;
+    box-shadow: 0px 0px 25px;
+    padding: 30px;
+}
+
+/* Titulo */
+#titulo, #titulo2, #titulo3, #titulo4{
+	width: 100%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+#divCabecalho select,
+#divCabecalho button {
+	width: 100px;
+	height: 30px;
+	margin-top: 5px;
+}

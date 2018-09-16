@@ -1,0 +1,36 @@
+<html>
+	<script>
+		function teste(){
+	var vet = [99, 1, 88, 2, 77, 3, 66, 4];
+	var i, x, k, j;
+	console.log("Teste do Insertion Sort");
+	console.log("Vetor Desordenado");
+	console.log(vet);
+	console.log("Ordenando o Vetor\n");
+ 
+	for(i = 1; i < vet.length; i++){
+		x = vet[i];
+		k = 0;
+		j = i - 1;
+		
+		while(j >= 0 && k == 0){
+			if(x < vet[j]){
+				vet[j + 1] = vet[j];
+				--j;
+			}
+			else
+				k = j + 1;
+		}
+      vet[k] = x;
+	  console.log(vet);
+	}
+	console.log(vet);
+	console.log("");
+	console.log("");
+}
+	</script>
+	
+	<h1>Teste do BubbleSort</h1>
+	<button onclick = "teste()">Clique Aqui</button>
+	
+</html>

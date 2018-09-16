@@ -1,0 +1,70 @@
+<html>
+	<script>
+        function heapsort(){
+            var array100e = [10,0,9,1,8,2,7,3,6,4,5];
+            console.log("Teste do Selection Sort");
+            console.log("Vetor Desordenado");
+            console.log(array100e);
+
+            var tempo1 = performance.now();
+
+            var arrayLength;
+
+            function ordenar(input) {
+                arrayLength = input.length;
+                for (var i = Math.floor(arrayLength / 2); i >= 0; i -= 1) {
+                    monte(input, i);
+                }
+            }
+
+            function monte(input, i) {
+                var esquerda = 2 * i + 1;
+                var direita = 2 * i + 2;
+                var maior = i;
+
+                if (esquerda < arrayLength && input[esquerda] > input[maior]) {
+                    maior = esquerda;
+                }
+
+                if (direita < arrayLength && input[direita] > input[maior]) {
+                    maior = direita;
+                }
+
+                if (maior != i) {
+                    troca(input, i, maior);
+                    monte(input, maior);
+                }
+            }
+
+            function troca(input, index_A, index_B) {
+                var aux = input[index_A];
+                input[index_A] = input[index_B];
+                input[index_B] = aux;
+            }
+
+            function heapSort(input) {
+                ordenar(input);
+                for (var i = input.length - 1; i > 0; i--) {
+                    troca(input, 0, i);
+                    arrayLength--;
+                    monte(input, 0);
+                }
+            }
+            
+            heapSort(array100e);
+
+            var tempo2 = performance.now();
+
+            console.log("Vetor Ordenado\n");
+            console.log(array100e);
+            console.log("");
+            console.log("");
+
+            document.getElementById("tempo_Heap_Sort").innerHTML = tempo2 - tempo1;
+        }
+	</script>
+	
+	<h1>Teste do BubbleSort</h1>
+	<button onclick = "heapsort()">Clique Aqui</button>
+	
+</html>
